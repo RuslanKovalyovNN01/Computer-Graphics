@@ -20,3 +20,11 @@ public:
 	QColor calcNewPixelColor(const QImage& img, int x, int y) const override;
 };
 
+class PerfectReflector : public Filter {
+	int maxR;
+	int maxB;
+	int maxG;
+public:
+	void maxColors(const QImage& img);
+	QColor calcNewPixelColor(const QImage& img, int x, int y) const override;
+};

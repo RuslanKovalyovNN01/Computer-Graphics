@@ -21,6 +21,9 @@ int main(int argc, char *argv[])
     invert.process(img).save("C:/Users/black/Desktop/Images/invert1.jpg");
     GrayScaleFilter grayScaleFilter;
     grayScaleFilter.process(img).save("C:/Users/black/Desktop/Images/grayScale1.jpg");
+    PerfectReflector perfectReflector;
+    perfectReflector.maxColors(img);
+    perfectReflector.process(img).save("C:/Users/black/Desktop/Images/perfectReflector1.jpg");
     QCoreApplication app(argc, argv);
     return app.exec();
 }
