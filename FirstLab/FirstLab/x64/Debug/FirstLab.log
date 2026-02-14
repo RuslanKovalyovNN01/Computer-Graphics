@@ -1,5 +1,6 @@
 ﻿   Qt/MSBuild: 3.4.1.0
   Reading Qt configuration (E:/newQt/6.10.2/msvc2022_64/bin/qmake)
    Qt: 6.10.2
+  Filter.cpp
   main.cpp
   FirstLab.vcxproj -> C:\Users\black\source\repos\ComputerGraphics\Computer-Graphics\FirstLab\x64\Debug\FirstLab.exe

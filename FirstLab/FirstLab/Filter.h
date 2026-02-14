@@ -10,3 +10,13 @@ public:
 	virtual QImage process(const QImage& img) const;
 };
 
+class InvertFilter : public Filter {
+public:
+	QColor calcNewPixelColor(const QImage& img, int x, int y) const override;
+};
+
+class GrayScaleFilter : public Filter {
+public:
+	QColor calcNewPixelColor(const QImage& img, int x, int y) const override;
+};
+

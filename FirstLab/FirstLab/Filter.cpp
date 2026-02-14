@@ -17,3 +17,16 @@ QImage Filter::process(const QImage& img) const {
 	}
 	return result;
 }
+
+QColor InvertFilter::calcNewPixelColor(const QImage &img, int x, int y) const {
+	QColor color = img.pixelColor(x, y);
+	color.setRgb(255 - color.red(), 255 - color.green(), 255 - color.blue());
+	return color;
+}
+
+QColor GrayScaleFilter::calcNewPixelColor(const QImage& img, int x, int y) const {
+	QColor color = img.pixelColor(x, y);
+	int intensity = static_cast<int>(0.299 * color.red() + 0.587 * color.green() + 0.114 * color.blue());
+	color.setRgb(intensity, intensity, intensity);
+	return color;
+}
